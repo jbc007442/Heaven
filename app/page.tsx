@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import logo from '../public/logo.jpeg';
 import owner from '../public/owner.jpeg';
+import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const HeavenHomesPortfolio = () => {
   const services = [
@@ -99,7 +100,7 @@ const HeavenHomesPortfolio = () => {
 
       {/* --- NEW: Strategic Impact (Stats) --- */}
       <section className="max-w-7xl mx-auto px-6 mb-24">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-center shadow-2xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-slate-900 p-8 md:p-16 text-center shadow-2xl">
           {stats.map((stat, i) => (
             <div key={i} className="border-r border-slate-800 last:border-0">
               <p className="text-4xl md:text-5xl font-black text-white mb-2">{stat.value}</p>
@@ -124,7 +125,7 @@ const HeavenHomesPortfolio = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative p-10 bg-white rounded-3xl border border-slate-100 hover:border-blue-600/20 hover:shadow-3xl transition-all duration-500"
+              className="group relative p-10 bg-white border border-slate-100 hover:border-blue-600/20 hover:shadow-3xl transition-all duration-500"
             >
               <div className="text-slate-200 group-hover:text-blue-100 absolute top-8 right-10 text-6xl font-black transition-colors">
                 0{index + 1}
@@ -171,7 +172,7 @@ const HeavenHomesPortfolio = () => {
       </section>
 
       {/* --- Founder Section --- */}
-      <section className="py-24 px-6 bg-slate-900 text-white rounded-[3rem] mx-4 mb-24 overflow-hidden">
+      <section className="py-24 px-6 bg-slate-900 text-white  mx-4 mb-24 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
@@ -215,21 +216,110 @@ const HeavenHomesPortfolio = () => {
       </section>
 
       {/* --- Footer --- */}
-      <footer id="contact" className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter italic">
-            Let&apos;s build your <span className="text-blue-600">heaven.</span>
-          </h2>
-          <a
-            href="mailto:contact@heavenhomes.com"
-            className="text-xl md:text-2xl font-bold text-slate-800 border-b-2 border-blue-600 pb-2 hover:text-blue-600 transition-all"
-          >
-            hello@heavenhomes.com
-          </a>
-          <div className="mt-20 flex flex-wrap justify-center gap-8 md:gap-16 text-[10px] font-black tracking-[0.3em] text-slate-400">
-            <span>EST. 2009</span>
-            <span>GURUGRAM HQ</span>
-            <span>REWARI BRANCH</span>
+      <footer id="contact" className="bg-[#0b1c2c] text-white px-6 py-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Grid */}
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            {/* Offices */}
+            <div>
+              <h4 className="text-xs tracking-[0.3em] text-yellow-500 mb-6 font-bold">
+                OUR OFFICES
+              </h4>
+
+              <div className="space-y-6 text-sm text-gray-300">
+                <div>
+                  <p className="font-semibold text-white">Gurugram</p>
+                  <p>Gurugram, Haryana</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold text-white">Rewari</p>
+                  <p>Rewari, Haryana</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold text-white">Kosli</p>
+                  <p>Kosli, Haryana</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-xs tracking-[0.3em] text-yellow-500 mb-6 font-bold">
+                WHAT WE OFFER
+              </h4>
+
+              <ul className="space-y-4 text-sm text-gray-300">
+                <li className="hover:text-blue-400 transition">Real Estate Brokerage</li>
+                <li className="hover:text-blue-400 transition">Co-working Spaces</li>
+                <li className="hover:text-blue-400 transition">Developer & Channel Advisory</li>
+                <li className="hover:text-blue-400 transition">Interior Design</li>
+              </ul>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="flex flex-col justify-between">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black italic leading-tight">
+                  Let&apos;s build your <span className="text-blue-500">heaven.</span>
+                </h2>
+
+                <a
+                  href="mailto:contact@heavenhomes.com"
+                  className="inline-block mt-6 text-lg font-semibold border-b border-blue-500 pb-1 hover:text-blue-400 transition"
+                >
+                  hello@heavenhomes.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-xs tracking-[0.25em] text-gray-400">
+            {/* Brand */}
+            <p className="text-lg font-semibold tracking-normal text-white">Heaven Homes</p>
+
+            {/* Info */}
+            <div className="flex gap-8 mt-4 md:mt-0">
+              <span>EST. 2009</span>
+              <span>GURUGRAM HQ</span>
+              <span>REWARI BRANCH</span>
+            </div>
+
+            {/* Social + Note */}
+            <div className="flex flex-col items-center md:items-end mt-4 md:mt-0 gap-3">
+              {/* Social Icons */}
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="p-2 rounded-full hover:bg-white/10 hover:text-blue-400 transition"
+                >
+                  <FaInstagram size={18} />
+                </a>
+                <a
+                  href="#"
+                  className="p-2 rounded-full hover:bg-white/10 hover:text-blue-400 transition"
+                >
+                  <FaLinkedin size={18} />
+                </a>
+                <a
+                  href="#"
+                  className="p-2 rounded-full hover:bg-white/10 hover:text-blue-400 transition"
+                >
+                  <FaFacebook size={18} />
+                </a>
+                <a
+                  href="#"
+                  className="p-2 rounded-full hover:bg-white/10 hover:text-blue-400 transition"
+                >
+                  <FaTwitter size={18} />
+                </a>
+              </div>
+
+              {/* Footer Note */}
+              <p className="text-[10px]">CONFIDENTIAL · FOR LESSOR REFERENCE ONLY</p>
+            </div>
           </div>
         </div>
       </footer>
