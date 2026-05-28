@@ -6,6 +6,11 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 const HeavenHomesPortfolio = () => {
   const services = [
     {
+      title: 'Real Estate Advisory',
+      desc: 'Strategic residential and commercial property advisory, developer tie-ups, and B2B partnerships.',
+      tech: ['Brokerage', 'B2B', 'Consultancy'],
+    },
+    {
       title: 'Interior Design',
       desc: 'Full-service design for residential apartments and commercial offices with zero outsourcing and total accountability.',
       tech: ['Concept', 'Space Planning', 'Execution'],
@@ -14,12 +19,7 @@ const HeavenHomesPortfolio = () => {
       title: 'Co-working Spaces',
       desc: 'Premium flexible workspaces in Gurugram featuring private cabins and conference facilities on SPR.',
       tech: ['Managed Workspaces', 'Private Cabins', 'SPR'],
-    },
-    {
-      title: 'Real Estate Advisory',
-      desc: 'Strategic residential and commercial property advisory, developer tie-ups, and B2B partnerships.',
-      tech: ['Brokerage', 'B2B', 'Consultancy'],
-    },
+    }
   ];
 
   const stats = [
